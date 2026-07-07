@@ -19,8 +19,8 @@
         </header>
 
         <!-- Seção de Instruções de Instalação -->
-        <div class="instructions">
-            <h2>Como Instalar os Aplicativos no seu Celular:</h2>
+        <div class="instructions" id="instructions-block">
+            <h2 onclick="toggleInstructions()">Como Instalar os Aplicativos no seu Celular:</h2>
             <ol>
                 <li>No seu celular LG Optimus 3D, vá em <strong>Ajustes (Configurações)</strong> > <strong>Aplicativos</strong>.</li>
                 <li>Marque a opção <strong>"Fontes Desconhecidas"</strong> para permitir a instalação de APKs fora do Google Play.</li>
@@ -103,6 +103,18 @@
         </footer>
 
     </div>
+
+    <!-- Script de compatibilidade retrô para alternar exibição de instruções -->
+    <script type="text/javascript">
+        function toggleInstructions() {
+            var el = document.getElementById("instructions-block");
+            if (el.className.indexOf("active") !== -1) {
+                el.className = "instructions";
+            } else {
+                el.className = "instructions active";
+            }
+        }
+    </script>
 
 </body>
 </html>
