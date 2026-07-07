@@ -47,12 +47,11 @@ header {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
 
-header h1 {
-    font-size: 24px;
-    color: #ffffff;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8), 0 0 10px rgba(0, 210, 255, 0.4);
-    margin-bottom: 5px;
-    font-weight: bold;
+header .logo {
+    display: block;
+    max-width: 280px;
+    height: auto;
+    margin: 0 auto 10px auto;
 }
 
 header p {
