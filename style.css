@@ -35,7 +35,7 @@ body {
 header {
     background-color: #1c1c1c;
     border: 1px solid #2e2e2e;
-    border-bottom: 2px solid #00d2ff;
+    border-bottom: 2px solid #e60012;
     padding: 20px 15px;
     text-align: center;
     margin-bottom: 20px;
@@ -56,7 +56,7 @@ header .logo {
 
 header p {
     font-size: 13px;
-    color: #00d2ff;
+    color: #e60012;
     letter-spacing: 1px;
     text-transform: uppercase;
 }
@@ -94,9 +94,9 @@ header p {
 }
 
 .app-card-inner:hover {
-    border-color: #00d2ff;
-    -webkit-box-shadow: 0 4px 12px rgba(0, 210, 255, 0.2);
-    box-shadow: 0 4px 12px rgba(0, 210, 255, 0.2);
+    border-color: #e60012;
+    -webkit-box-shadow: 0 4px 12px rgba(230, 0, 18, 0.2);
+    box-shadow: 0 4px 12px rgba(230, 0, 18, 0.2);
 }
 
 /* Área do Ícone */
@@ -137,7 +137,7 @@ header p {
 }
 
 .icon-browser {
-    background-color: #005ec2;
+    background-color: #a50034;
 }
 
 .icon-camera {
@@ -161,7 +161,7 @@ header p {
 
 .app-meta {
     font-size: 11px;
-    color: #00d2ff;
+    color: #e60012;
     margin-bottom: 8px;
     font-weight: bold;
     letter-spacing: 0.5px;
@@ -179,7 +179,7 @@ header p {
     display: block;
     width: 100%;
     text-align: center;
-    background-color: #008bbb;
+    background-color: #a50034;
     
     color: #ffffff;
     text-decoration: none;
@@ -197,15 +197,15 @@ header p {
 }
 
 .btn-download:active, .btn-download:hover {
-    background-color: #00d2ff;
-    color: #121212;
+    background-color: #e60012;
+    color: #ffffff;
 }
 
 /* Painel de Instruções de Instalação */
 .instructions {
     background-color: #1c1c1c;
     border: 1px solid #2e2e2e;
-    border-left: 4px solid #00d2ff;
+    border-left: 4px solid #e60012;
     padding: 15px;
     margin-top: 20px;
     margin-bottom: 30px;
@@ -235,7 +235,7 @@ header p {
     top: 50%;
     margin-top: -8px;
     font-size: 12px;
-    color: #00d2ff;
+    color: #e60012;
 }
 
 .instructions.active h2 {
