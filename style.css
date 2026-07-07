@@ -1,0 +1,219 @@
+/* 
+   style.css 
+   Estilos CSS compatíveis com Android 2.3 (Gingerbread) WebKit antigo
+   Autor: Antigravity AI
+*/
+
+/* Reset básico e configurações de box-sizing */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #121212;
+    color: #e0e0e0;
+    font-family: "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    padding: 10px;
+    -webkit-text-size-adjust: none; /* Evita que o navegador antigo mude o tamanho do texto sozinho */
+}
+
+/* Container Principal */
+.container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 5px;
+}
+
+/* Cabeçalho do Site */
+header {
+    background-color: #1f1f1f;
+    /* Gradientes compatíveis com todas as versões de WebKit e navegadores modernos */
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#2d2d2d), to(#121212)); /* Android 2.1-3.0 */
+    background-image: -webkit-linear-gradient(top, #2d2d2d, #121212); /* Android 4.0+, iOS 5+ */
+    background-image: linear-gradient(to bottom, #2d2d2d, #121212);
+    
+    border-bottom: 2px solid #00d2ff; /* Azul Neon do Android Gingerbread/Honeycomb */
+    padding: 20px 15px;
+    text-align: center;
+    margin-bottom: 20px;
+    
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+    
+    -webkit-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+header h1 {
+    font-size: 24px;
+    color: #ffffff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8), 0 0 10px rgba(0, 210, 255, 0.4);
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+header p {
+    font-size: 13px;
+    color: #00d2ff;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Grid de Aplicativos usando Inline-Block para maior compatibilidade (Substituto de Flexbox/Grid) */
+.app-grid {
+    text-align: left;
+    font-size: 0; /* Corrige espaçamento extra de inline-block */
+    margin: 0 -10px;
+}
+
+/* Cartão do Aplicativo */
+.app-card {
+    display: inline-block;
+    vertical-align: top;
+    width: 100%; /* Default para telas pequenas de celular (coluna única) */
+    font-size: 14px; /* Restaura tamanho da fonte resetado no grid */
+    padding: 0 10px;
+    margin-bottom: 20px;
+}
+
+.app-card-inner {
+    background-color: #1a1a1a;
+    border: 1px solid #2a2a2a;
+    padding: 15px;
+    
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    
+    -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.app-card-inner:hover {
+    border-color: #00d2ff;
+}
+
+.app-title {
+    font-size: 18px;
+    color: #ffffff;
+    margin-bottom: 5px;
+    font-weight: bold;
+    border-bottom: 1px solid #222222;
+    padding-bottom: 5px;
+}
+
+.app-meta {
+    font-size: 11px;
+    color: #00d2ff;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.app-description {
+    color: #b0b0b0;
+    font-size: 13px;
+    margin-bottom: 15px;
+    min-height: 40px;
+}
+
+/* Botão de Download */
+.btn-download {
+    display: block;
+    width: 100%;
+    text-align: center;
+    background-color: #008bbb;
+    
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#00a2cc), to(#006b8f));
+    background-image: -webkit-linear-gradient(top, #00a2cc, #006b8f);
+    background-image: linear-gradient(to bottom, #00a2cc, #006b8f);
+    
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 12px 10px; /* Touch target grande de no mínimo 45px de altura total */
+    
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    
+    border: 1px solid #005a78;
+    text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.4);
+    
+    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.btn-download:active, .btn-download:hover {
+    background-color: #00a2cc;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#00b8e6), to(#008bbb));
+    background-image: -webkit-linear-gradient(top, #00b8e6, #008bbb);
+    background-image: linear-gradient(to bottom, #00b8e6, #008bbb);
+    border-color: #008bbb;
+}
+
+/* Painel de Instruções de Instalação */
+.instructions {
+    background-color: #1a1a1a;
+    border-left: 4px solid #00d2ff;
+    padding: 15px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    
+    -webkit-border-radius: 0 6px 6px 0;
+    border-radius: 0 6px 6px 0;
+}
+
+.instructions h2 {
+    font-size: 16px;
+    color: #ffffff;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.instructions ol {
+    margin-left: 20px;
+    color: #b0b0b0;
+    font-size: 13px;
+}
+
+.instructions li {
+    margin-bottom: 8px;
+}
+
+.instructions strong {
+    color: #ffffff;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 20px 0 30px 0;
+    color: #666666;
+    font-size: 11px;
+    border-top: 1px solid #222222;
+}
+
+/* Layout Multi-Coluna para Computadores / Telas Maiores */
+@media screen and (min-width: 600px) {
+    body {
+        padding: 20px;
+    }
+    
+    .container {
+        padding: 10px;
+    }
+    
+    header h1 {
+        font-size: 32px;
+    }
+    
+    .app-card {
+        width: 50%; /* Duas colunas em telas maiores */
+    }
+}
